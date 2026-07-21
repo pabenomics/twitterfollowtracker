@@ -24,7 +24,7 @@ Trois choses (quatre secrets), injectées via le coffre à secrets du dépôt, j
 
 | Secret | Rôle | Où l'obtenir |
 |---|---|---|
-| `API_KEY` | Clé RapidAPI pour l'API Twitter241 | [RapidAPI → Twitter241](https://rapidapi.com/), onglet abonnement, en-tête `X-RapidAPI-Key` |
+| `API_KEY` | Clé RapidAPI pour l'API Twitter241 | [RapidAPI → TwttrAPI](https://rapidapi.com/), onglet abonnement, en-tête `X-RapidAPI-Key` |
 | `TELEGRAM_TOKEN` | Token du bot Telegram qui envoie les alertes | [@BotFather](https://t.me/BotFather) puis `/newbot` |
 | `TELEGRAM_CHAT_ID` | ID de la conversation, du groupe ou du canal de réception | appel `getUpdates`, voir étape 3 |
 | `TARGETS` | Liste des comptes à surveiller | pseudos séparés par des virgules, sans `@`, ex : `compte1,compte2,compte3` |
@@ -44,7 +44,7 @@ Ce guide part de zéro. Aucune compétence en code n'est requise : tout se fait 
 Le tracker lit les abonnements des comptes via l'API Twitter241, hébergée sur RapidAPI.
 
 1. Crée un compte gratuit sur [rapidapi.com](https://rapidapi.com).
-2. Cherche « Twitter241 » dans la barre de recherche et ouvre la page de l'API.
+2. Cherche [Twtter API](https://rapidapi.com/davethebeast/api/twitter241)
 3. Onglet **Pricing** : souscris à un plan. Il existe un palier gratuit pour tester, mais il est limité en nombre d'appels. Selon le nombre de cibles et la taille de leurs abonnements, tu passeras vite sur un plan payant. Surveille ton quota.
 4. Une fois abonné, va dans l'onglet **Endpoints**. Dans le panneau de code à droite, repère l'en-tête `X-RapidAPI-Key`. La longue chaîne de caractères après le nom, c'est ta clé. Copie-la et garde-la de côté.
 
