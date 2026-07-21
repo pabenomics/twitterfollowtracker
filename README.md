@@ -39,8 +39,8 @@ Notes :
 
 - **`API_HOST`** est fixé à `twitter241.p.rapidapi.com` dans `config.py`. Si tu utilises un autre fournisseur RapidAPI compatible, change-le là. Les endpoints appelés sont `/following-ids`, `/get-users` et `/user`.
 
-**Telegram est optionnel : si `TELEGRAM_TOKEN` est vide, les alertes sont désactivées et seul le CSV est écrit.
-**
+Telegram est optionnel : si `TELEGRAM_TOKEN` est vide, les alertes sont désactivées et seul le CSV est écrit.
+
 ---
 
 ## Mise en route (GitHub Actions, recommandé)
