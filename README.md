@@ -32,14 +32,12 @@ Trois choses, injectées via les **secrets** du dépôt (jamais en dur dans le c
 |---|---|---|
 | `API_KEY` | Clé RapidAPI pour l'API Twitter241 | [RapidAPI → Twitter241](https://rapidapi.com/), onglet abonnement, `X-RapidAPI-Key` |
 | `TELEGRAM_TOKEN` | Token du bot Telegram qui envoie les alertes | [@BotFather](https://t.me/BotFather) → `/newbot` |
-| `TELEGRAM_CHAT_ID` | ID du canal/groupe/conversation où recevoir les alertes | 
-| `TARGETS` | Liste des comptes à surveiller, séparés par des virgules |
+| `TELEGRAM_CHAT_ID` | ID du canal/groupe/conversation où recevoir les alertes | crée le bot, ajoute-le à ton groupe/canal, envoie un message, puis appelle `https://api.telegram.org/bot<TON_TOKEN>/getUpdates` et lis le champ `chat.id`. Pour un canal, l'ID commence souvent par `-100`.|
+| `TARGETS` | Liste des comptes à surveiller, séparés par des virgules |pas de `@`, séparés par des virgules, ex : `TARGETS = compte1,compte2,compte3`.
 
 Notes :
 
 - **`API_HOST`** est fixé à `twitter241.p.rapidapi.com` dans `config.py`. Si tu utilises un autre fournisseur RapidAPI compatible, change-le là. Les endpoints appelés sont `/following-ids`, `/get-users` et `/user`.
-- **`TELEGRAM_CHAT_ID`** : crée le bot, ajoute-le à ton groupe/canal, envoie un message, puis appelle `https://api.telegram.org/bot<TON_TOKEN>/getUpdates` et lis le champ `chat.id`. Pour un canal, l'ID commence souvent par `-100`.
-- **`TARGETS`** : pas de `@`, séparés par des virgules, ex : `TARGETS = compte1,compte2,compte3`.
 
 **Telegram est optionnel : si `TELEGRAM_TOKEN` est vide, les alertes sont désactivées et seul le CSV est écrit.
 **
