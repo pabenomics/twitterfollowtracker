@@ -1,7 +1,4 @@
-# twitterfollowtracker
-Twitter Follow tracker
-
-# Twitter Following Tracker
+# Twitter Follow tracker
 
 Surveille les **nouveaux comptes suivis** par une liste de comptes X (Twitter) cibles, et envoie une alerte Telegram + un log CSV à chaque nouveau follow détecté. Pensé pour de la veille : dealflow, sourcing, détection de signaux faibles sur qui suit quoi.
 
