@@ -1,0 +1,38 @@
+name: Twitter Tracker Daily Run
+
+on:
+  schedule:
+    - cron: '34 5 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-tracker:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Tracker
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TARGETS: ${{ secrets.TARGETS }}
+        run: python tracker.py
+
+      - name: Save Data (Commit & Push)
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update tracker data $(date +'%Y-%m-%d')" && git push)
