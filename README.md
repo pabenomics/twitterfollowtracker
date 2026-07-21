@@ -87,8 +87,6 @@ C'est l'étape clé pour la confidentialité. Un « Fork » classique sur GitHub
 4. Choisis **Private**.
 5. Clique sur « Begin import ». Au bout de quelques secondes, tu as ta copie privée, identique au template.
 
-Alternative en un clic, si ce dépôt est marqué comme « Template repository » par son auteur : utilise le bouton vert **Use this template** sur la page du dépôt, puis « Create a new repository » en choisissant **Private**.
-
 ### Étape 5 : enregistrer tes secrets
 
 Tes clés ne se mettent jamais dans le code. Elles vivent dans le coffre à secrets de ton dépôt, où GitHub les chiffre.
