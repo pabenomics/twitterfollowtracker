@@ -1,6 +1,6 @@
 # Twitter Follow Tracker
 
-Surveille les **nouveaux comptes suivis** par une liste de comptes X (Twitter) cibles, et envoie une alerte Telegram plus un log CSV à chaque nouveau follow détecté. Pensé pour de la veille : dealflow, sourcing, détection de signaux faibles sur qui suit quoi.
+Surveille les **nouveaux comptes suivis** par une liste de comptes Twitter cibles, et envoie une alerte Telegram plus un log CSV à chaque nouveau follow détecté. Pensé pour de la veille : dealflow, sourcing, détection de signaux faibles sur qui suit quoi.
 
 Le principe est simple. Chaque jour, le script récupère la liste des abonnements de chaque compte cible, la compare à la photo de la veille, et ne remonte que la différence, c'est-à-dire les nouveaux follows. Chaque nouveau compte est enrichi (nom, bio, followers, localisation, site, badge vérifié, ancienneté) et signalé s'il est aussi suivi par d'autres de tes cibles (les « mutuals »).
 
